@@ -1,0 +1,74 @@
+.mod_flash_messages .flash-messages{
+    list-style: none;
+    margin: 0;
+}
+
+.mod_flash_messages .flash-message{
+    margin: 0;
+    margin-bottom: 5px;
+    display: block;
+    padding: 5px 40px;
+    border: 1px solid gray;
+    position: relative;
+    min-height: 35px;
+}
+
+.mod_flash_messages .flash-message .flash-icon{
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    filter: grayscale(1);
+    font-style: normal;
+    transition: all .5s;
+}
+
+.mod_flash_messages .flash-message .flash-icon::after{
+    content: 'ℹ️';
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    font-size: 22px;
+    height: 22px;
+    margin-top: -16px;
+}
+
+.mod_flash_messages .flash-message.warn .flash-icon::after{
+    content: '⚠️';
+}
+
+.mod_flash_messages .flash-message.warning .flash-icon::after{
+    content: '⚠️';
+}
+
+.mod_flash_messages .flash-message.error .flash-icon::after{
+    content: '⛔';
+}
+
+.mod_flash_messages .flash-message .flash-dismiss{
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: all .5s;
+    opacity: .8;
+    filter: grayscale(1);
+}
+
+.mod_flash_messages .flash-message .flash-dismiss::after{
+    content: '✖';
+    display: block;
+    position: absolute;
+    left: -25px;
+    top: 5px;
+    font-size: 18px;
+}
+
+.mod_flash_messages .flash-message:hover .flash-icon{
+    filter: grayscale(0);
+}
+
+.mod_flash_messages .flash-comm{
+    height: 0px;
+    overflow: hidden;
+}

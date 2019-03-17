@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.1">
+  <file datatype="php" original="src/Resources/contao/languages/en/tl_flash.php" source-language="en">
+    <body>
+      <trans-unit id="tl_flash.flash_namespace.0">
+        <source>Namespace</source>
+      </trans-unit>
+      <trans-unit id="tl_flash.flash_namespace.1">
+        <source>Namespace filter for flash messages, leave empty to display all.</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

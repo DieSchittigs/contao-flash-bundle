@@ -1,0 +1,33 @@
+<?php if(!empty($this->flashMessages)): ?>
+<?php $this->extend('block_unsearchable'); ?>
+<?php $this->block('content'); ?>
+
+<div class="flash-messages-wrapper">
+    <ul class="flash-messages">
+    <?php foreach($this->flashMessages as $flash): ?>
+        <li class="flash-message <?= implode(' ', $flash->cssClasses) ?>">
+            <i class="flash-icon"></i>
+            <div class="flash-content">
+                <?= $flash->message ?>
+            </div>
+            <?php if(!$flash->autoDismiss): ?>
+            <a href="flash/clear?id=<?= $flash->id ?>" class="flash-dismiss"></a>
+            <?php endif ?>
+        </li>
+    <?php endforeach ?>
+    </ul>
+    <div class="flash-comm">
+        <script>
+            var _flashIds = [<?= implode(',', $this->encIds) ?>];
+            window.ContaoFlash = window.ContaoFlash || {};
+            window.ContaoFlash.clear = window.ContaoFlash.clear ? window.ContaoFlash.clear.concat(_flashIds) : _flashIds;
+        </script>
+        <noscript>
+            <img width="1" height="1" src="flash/clear?ids=<?= implode(',', $this->ids) ?>&img=1" />
+        </noscript>
+    </div>
+</div>
+<div>
+
+<?php $this->endblock(); ?>
+<?php endif ?>
