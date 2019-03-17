@@ -6,7 +6,7 @@ messages (short lived, informal messages for a single user) very convenient.
 ## Features
 
 🔋 Ready to use frontend module, including style sheets and JavaScript  
-⏳ Messages stay in session until rendered (or dismissed)
+⏳ Messages stay in session until rendered (or dismissed)  
 ⁉️ Display success, error, info and entirely custom messages  
 👽 Advanced features for name-spacing and further customization  
 📼 Simple and solid, works even in environments with disabled JS  
