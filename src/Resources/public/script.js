@@ -13,6 +13,7 @@ ContaoFlash.registerEventHandlers = function(){
     if(!elements.length) return;
     elements.forEach(function(el){
         var close = el.querySelector('.flash-dismiss');
+        if(!close) return;
         close.addEventListener('click', function(e){
             e.preventDefault();
             var xhr = new XMLHttpRequest();
