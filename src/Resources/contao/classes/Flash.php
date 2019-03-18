@@ -6,6 +6,22 @@ use Symfony\Component\HttpFoundation\Session\Flash\FlashBag;
 
 class Flash {
 
+ /**
+ * Stores, retreives and purges flash messages in user session
+ *
+ * @property string  $id
+ * @property boolean $autoDismiss
+ * @property string  $type
+ * @property array   $cssClasses
+ * @property string  $namespace
+
+ * @method static Flash warn($message)
+ * @method static Flash error($message)
+ * @method static Flash info($message)
+ * @method static Flash success($message)
+ *
+ */
+    
     protected static $sessionKey = '__cfb';
     protected static $flashes = [];
     public $id;
