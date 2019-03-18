@@ -46,7 +46,7 @@ class Flash {
     }
 
     public static function load(){
-        self::$flashes = self::getSession()->get(self::$sessionKey);
+        self::$flashes = self::getSession()->get(self::$sessionKey) ?? [];
         return self::$flashes;
     }
 
