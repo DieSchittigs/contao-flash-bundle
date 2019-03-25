@@ -41,12 +41,16 @@ class ModuleFlashMessages extends \Module {
         $flashMessages = Flash::load();
 
         $ids = [];
-        $encIds = [];
-        foreach($flashMessages as $flash){
-            if(!$flash->autoDismiss) continue;
-            $ids[] = $flash->id;
-            $encIds[] = "\"$flash->id\"";
-        }
+		$encIds = [];
+		
+		if($flashMessages) {
+			foreach($flashMessages as $flash){
+				if(!$flash->autoDismiss) continue;
+				$ids[] = $flash->id;
+				$encIds[] = "\"$flash->id\"";
+			}
+		}
+
 		$this->Template->flashMessages = $flashMessages;
 		$this->Template->ids = $ids;
 		$this->Template->encIds = $encIds;
